@@ -31,4 +31,6 @@ class AuthenticationUserTestCase(APITestCase):
         self.client.force_authenticate(user=self.usuario)
         response = self.client.get(reverse('Estudantes-list'))
         self.assertEqual(response.status_code,status.HTTP_200_OK)
+    
+    
 

@@ -1,6 +1,11 @@
 
 '''
 
+
+
+'''
+
+
 from django.test import TestCase
 from escola.models import Curso
 from escola.serializers import CursoSerializer
@@ -32,8 +37,3 @@ class CursoSerializerTestCase(TestCase):
         self.assertIn('codigo', serializer.errors)  
         self.assertIn('descricao', serializer.errors)  
         self.assertIn('nivel', serializer.errors)  
-
-
-
-'''
-

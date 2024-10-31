@@ -1,5 +1,17 @@
 from django.test import TestCase
 from escola.models import Estudante, Curso, Matricula
+from django.urls import reverse
+from rest_framework import status
+from rest_framework.test import APITestCase
+from django.contrib.auth.models import User
+
+
+
+from django.contrib.auth.models import User
+from rest_framework.test import APITestCase, force_authenticate
+from django.contrib.auth import authenticate
+
+
 
 class ModelEstudanteTesteCase(TestCase):
     def setUp(self):
@@ -36,39 +48,3 @@ class ModelCursoTesteCase(TestCase):
         self.assertEqual(self.curso.nivel, "B")
 
 #------------------------------------------------------------------------------
-'''
-class ModelMatriculaTesteCase(TestCase):
-    def setUp(self):
-
-        self.estudante = Estudante.objects.create(
-            nome = "teste do modelo estudante",
-            email = "teste@gmail.com",
-            cpf = "09225248075",
-            data_nascimento = "2022-03-23",
-            celular = "88 98888-4444"
-        )
-
-        self.curso = Curso.objects.create(
-            codigo = "1",
-            descricao = "curso python",
-            nivel = "B",
-        )
-
-
-        self.matricula = Matricula.objects.create(
-            estudante=self.estudante,
-            curso=self.curso,
-            periodo = "2024-07-23",
-        )
-
-    def test_verifica_atributos_de_matricula(self):
-    
-        self.assertEqual(self.matricula.estudante.nome, "teste do modelo estudante")
-        self.assertEqual(self.matricula.curso.codigo, "1")
-        self.assertEqual(self.matricula.periodo, "2024-07-23")
-
-
-'''
-
-
-
