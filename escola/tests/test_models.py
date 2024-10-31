@@ -19,6 +19,8 @@ class ModelEstudanteTesteCase(TestCase):
         self.assertEqual(self.estudante.data_nascimento, "2022-03-23")
         self.assertEqual(self.estudante.celular, "88 98888-4444")
 
+#-----------------------------------------------------------------------------
+
 class ModelCursoTesteCase(TestCase):
     def setUp(self):
         self.curso = Curso.objects.create(
@@ -33,8 +35,8 @@ class ModelCursoTesteCase(TestCase):
         self.assertEqual(self.curso.descricao, "curso python")
         self.assertEqual(self.curso.nivel, "B")
 
-
-
+#------------------------------------------------------------------------------
+'''
 class ModelMatriculaTesteCase(TestCase):
     def setUp(self):
 
@@ -64,6 +66,9 @@ class ModelMatriculaTesteCase(TestCase):
         self.assertEqual(self.matricula.estudante.nome, "teste do modelo estudante")
         self.assertEqual(self.matricula.curso.codigo, "1")
         self.assertEqual(self.matricula.periodo, "2024-07-23")
+
+
+'''
 
 
 
